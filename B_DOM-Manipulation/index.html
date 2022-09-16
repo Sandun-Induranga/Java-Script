@@ -5,8 +5,8 @@
     <title>DOM Manipulation</title>
     <style>
         img{
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
         }
     </style>
 </head>
@@ -15,7 +15,7 @@
 <h2>What is DOM..?</h2>
 <h3>Institute of Software Engineering</h3>
 
-<img src="" alt="image"><input type="text" placeholder="Input Something">
+<img id="image" src="" alt="image"><input type="text" placeholder="Input Something">
 
 <ul>
     <li>GDSE</li>
@@ -30,21 +30,33 @@
 
 <input id="inputId" type="text" placeholder="Input Something">
 
+<img id="img1" src="" alt="">
+<img id="img2" src="https://lh3.googleusercontent.com/KMMZnP4YVbgekhXSDtj7aJFMjgJOb4cOjJAM_3g_ElMs3enibD6wSGUBxnMm1NiJYao1vwNpidSwZ2e4KxD7gCX6mBr7JP8h9P6bh3HLTbY7Yf8bDqeXl5x3ke9eRTkyJ8Efmom9CKOlDDMH_yKV-ysvBZySznIL7HGfM7lhcmkdOKWCXrvsb3rFD14BEkTLEvs9Xvw_y6eNcoTC8M_l13l95JIT2hs8lAPyFlYcF-wIi1Ih_wWIPfZqOpte5K4ZEUri60qKYjXD-xiN7UZwLESrEBCQlWNtdo0lnBYneiLla8CuJmTFBy6ZMRz7RHyljH7V8J3XseyHYfCZYCr4lNazJAaX0xphMZ4iTVs_a8YVXm5fgsw5Nw1RilYtNoQLkCNE5yhhWAWAgN1pdqW4SWeVmbsK3BSkKs15NroEyGIDMhXL0vCOV0O93xqfPX3XEBI_zaMV1PwQWHgX-_ub3s-tnUDURDzrpsXsqo3NsKUdgTqGcRH4S7f-ncAiUqrqafoB3XJZ__1R15yemZQ2AkHC9TFDe4EhOCK9weE5G2NWwCAcYrmhA-O8LgKeRII1Pif4OMhN_cZPJ2YDH45Ysk50jS7-bD76dcXG5GdLSdWZxo6sk7tR4GnMem1BZbrvBVOWxXfc490Kh2YUrL651NyZEC8W3X5PO_RZ9eLnzeppC9H5bwc7BvKd1CedAZxDkZnsDWupA0Ln5eH5XcJ7Yg4TgIlNvtRFxjLTwj-JG5IaE-ao=w2730-h1532-no" alt="">
+<img id="img3" src="https://lh3.googleusercontent.com/jwaBAa8u4f7Vfc57V5PRPAGj1Xf6IGEoQfzlVqOEexjOG8qIBK6i0801m_HdZC1Fb4rKC4WqfiEHyLwp9HQaC1LJ40Kqi5lit5LTVEpU2EadTWZ8yYMIE68tBrmR8tXg-6wayNeB8CvDFoge_abVkm62xLAHNJdijXlb--ItYJEVn91qAx3AcLoEKQ7bRbYtDxKRJqjguQx3ztdd0Syk6T-c384lvHBGMnlgTZpEEjJywsOJJxAajB9oTd8K3j-kMrKZrujZL2KQAuHwvJIcBN4_tmguzOEvGEU1b8VRIkFjWFw-P9Q9eOhnldnw7JOGPPHmlSiGeDWSkh1cv4lCA_9GSlcvDmbttQeY-HxDcKU0w8_yTXlnpVTG77-DtPe5jhm_aiwzfgiFiXfUb_1TegHJ_qCaSvuPeP12pGib625pHFx571fHULdR2-6Ymhz6XXqH-m4YP_CgHQX3b720Q-vWQCwDafCJ3PIigxx2NoU79fRZGF38RsEbqbyGinNMUWWZM9ql43v9Jmy1B7NppBcSrjjqmGq9Xr_i0TcpYhj8Pr-ndLTgBJS49795VsG31fiGOswD-FcoOfR92VjgnLZpYrG6bhcYyKw34NUI5nP8yks2az8e5PAtbwBM3zKFAW7PvSGnU-2bsQEFirVJbGyasiR_l0WmZvFpBEF6Gz_xBHhN6i-BEUlVTYu_jIp7LTPmwVJFlpMxpRIIzuu1VmG3f9SWo65Z-uAsO83Jv22Wg5Tc=w2298-h1532-no" alt="">
+
+<button id="btn1">Image 1</button>
+<button id="btn2">Image 2</button>
+<button id="btn3">Image 3</button>
+
 <script>
 
-    // // By using following methods we can select DOMs
-    //
-    // document.getElementById("") // select unique element by Id (One HTML)
-    // document.getElementsByClassName("") // select unique group of elements by class (HTML Collection)
-    // document.getElementsByName("") // select an element by name attribute (Node Collection)
-    // document.getElementsByTagName("") // select an element by own element name (HTML Collection)
-    // document.querySelector("") // select only one element from the matching collection, Can use CSS selectors
-    //
-    // /* Remove elements */
+    /*
+    *
+    *
+    // By using following methods we can select DOMs
+
+    document.getElementById("") // select unique element by Id (One HTML)
+    document.getElementsByClassName("") // select unique group of elements by class (HTML Collection)
+    document.getElementsByName("") // select an element by name attribute (Node Collection)
+    document.getElementsByTagName("") // select an element by own element name (HTML Collection)
+    document.querySelector("") // select only one element from the matching collection, Can use CSS selectors
+    *
+    /* Remove elements */
     // document.getElementsByTagName("h1")[0].remove()
 
+
     document.getElementsByTagName("button")[0].addEventListener("click", function() {
-        document.getElementsByTagName("img")[0].src = document.getElementsByTagName("input")[0].value;
+        document.getElementById("image").src = document.getElementsByTagName("input")[0].value;
     });
 
     document.getElementById("inputId").addEventListener("keyup", function() {
