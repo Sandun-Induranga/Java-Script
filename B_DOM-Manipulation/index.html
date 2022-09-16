@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM Manipulation</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
 </head>
 <body>
 <h1>Hello Java Script</h1>
 <h2>What is DOM..?</h2>
 <h3>Institute of Software Engineering</h3>
 
-<input type="text" placeholder="Input Something">
+<img src="" alt="image"><input type="text" placeholder="Input Something">
 
 <ul>
     <li>GDSE</li>
@@ -20,15 +26,31 @@
 
 <button>Test</button>
 
+<h1 id="h1Id">////////////////////////////////</h1>
+
+<input id="inputId" type="text" placeholder="Input Something">
+
 <script>
 
-    // By using following methods we can select DOMs
+    // // By using following methods we can select DOMs
+    //
+    // document.getElementById("") // select unique element by Id (One HTML)
+    // document.getElementsByClassName("") // select unique group of elements by class (HTML Collection)
+    // document.getElementsByName("") // select an element by name attribute (Node Collection)
+    // document.getElementsByTagName("") // select an element by own element name (HTML Collection)
+    // document.querySelector("") // select only one element from the matching collection, Can use CSS selectors
+    //
+    // /* Remove elements */
+    // document.getElementsByTagName("h1")[0].remove()
 
-    document.getElementById("") // select unique element by Id (One HTML)
-    document.getElementsByClassName("") // select unique group of elements by class (HTML Collection)
-    document.getElementsByName("") // select an element by name attribute (Node Collection)
-    document.getElementsByTagName("") // select an element by own element name (HTML Collection)
-    document.querySelector("") // select only one element from the matching collection, Can use CSS selectors
+    document.getElementsByTagName("button")[0].addEventListener("click", function() {
+        document.getElementsByTagName("img")[0].src = document.getElementsByTagName("input")[0].value;
+    });
+
+    document.getElementById("inputId").addEventListener("keyup", function() {
+        document.getElementById("h1Id").innerHTML = document.getElementById("inputId").value
+    });
+
 
 </script>
 
