@@ -9,10 +9,10 @@
 <h1>jQuery</h1>
 <h2>What is jQuery and How it works..?</h2>
 <input type="text" placeholder="Input Something">
-<button>Test</button>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem dolorem ex illo illum impedit ipsum libero molestias nemo quaerat quibusdam quidem quod, rem, similique soluta ullam, voluptatem. Dignissimos, laborum!</p>
+<button class="button">Test</button>
+<p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem dolorem ex illo illum impedit ipsum libero molestias nemo quaerat quibusdam quidem quod, rem, similique soluta ullam, voluptatem. Dignissimos, laborum!</p>
 <ul>
-    <li>GDSE</li>
+    <li class=".button">GDSE</li>
     <li>RWAD</li>
     <li>CMJD</li>
     <li>DEP</li>
@@ -23,6 +23,18 @@
 
     // document.querySelector("h1").style.color='red'
     $('h1').css('color','red')
+
+    /* We can change the selector too, if we want */
+    // let RS = jQuery.noConflict()
+    // RS('h2').css('color','orange')
+
+    $('#para').css('font-size','30px')
+
+    $('.button').css('background','deeppink')
+
+    $('[class]').css('font-size','40px')
+
+    $('li:last-child').css('color','red')
 
 </script>
 
