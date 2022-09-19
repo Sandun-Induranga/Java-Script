@@ -9,8 +9,11 @@
 <h1>jQuery</h1>
 <h2>What is jQuery and How it works..?</h2>
 <input type="text" placeholder="Input Something">
-<button class="button">Test</button>
-<p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem dolorem ex illo illum impedit ipsum libero molestias nemo quaerat quibusdam quidem quod, rem, similique soluta ullam, voluptatem. Dignissimos, laborum!</p>
+<button id="button1">Up</button>
+<button id="button2">Down</button>
+<p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem dolorem ex illo illum impedit
+    ipsum libero molestias nemo quaerat quibusdam quidem quod, rem, similique soluta ullam, voluptatem. Dignissimos,
+    laborum!</p>
 <ul>
     <li class=".button">GDSE</li>
     <li>RWAD</li>
@@ -22,7 +25,7 @@
 <script>
 
     // document.querySelector("h1").style.color='red'
-    $('h1').css('color','red')
+    // $('h1').css('color','red')
 
     /* We can change the selector too, if we want */
     // let RS = jQuery.noConflict()
@@ -36,13 +39,21 @@
     //
     // $('li:last-child').css('color','red')
 
-    // CSS Combinators
-    $('ul>li').css('font-weight','bold')
+    // // CSS Combinators
+    // $('ul>li').css('font-weight','bold')
+    //
+    // $('body h1').css('font-style','italic')
+    //
+    // // Grouping selector
+    // $('h1,h2').css('font-size','50px')
 
-    $('body h1').css('font-style','italic')
+    $('#button1').click(function () {
+        $('ul').prepend('<li>'+$("input").val()+'</li>')
+    })
 
-    // Grouping selector
-    $('h1,h2').css('font-size','50px')
+    $('#button2').click(function () {
+        $('ul').append('<li>'+$("input").val()+'</li>')
+    })
 
 </script>
 
