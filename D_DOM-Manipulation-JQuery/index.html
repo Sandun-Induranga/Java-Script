@@ -26,7 +26,7 @@
     <li>DEP</li>
 </ul>
 
-<button>Test</button>
+<button id="btn">Test</button>
 
 <h1 id="h1Id">////////////////////////////////</h1>
 
@@ -47,36 +47,39 @@
 <button id="btn2">Image Two</button>
 <button id="btn3">Image Three</button>
 
+<script src="assets/js/jquery-3.6.1.min.js"></script> <!-- Import jQuery -->
 <script>
 
     /* get the text field value and set is to the image source */
-    document.getElementsByTagName("button")[0].addEventListener("click", function () {
-        document.getElementById("image").src = document.getElementsByTagName("input")[0].value;
+    $("#btn").click(function () {
+        var val = $("input").val();
+        $("#image").attr('src',val);
     });
 
     // Display typed text on the h1 while typing
-    document.getElementById("inputId").addEventListener("keyup", function () {
-        document.getElementById("h1Id").innerHTML = document.getElementById("inputId").value
+    $("#inputId").keyup(function () {
+        $('#h1Id').text($("#inputId").val())
+        // alert("come")
     });
 
     /* Image hiding case */
 
-    document.getElementById("btn1").addEventListener("click", function () {
-        document.getElementById("img1").style.visibility = "hidden"
-        document.getElementById("img2").style.visibility = "visible"
-        document.getElementById("img3").style.visibility = "visible"
+    $('#btn1').click(function () {
+        $('#img1').css('visibility','hidden')
+        $('#img2').css('visibility','visible')
+        $('#img3').css('visibility','visibl')
     })
 
-    document.getElementById("btn2").addEventListener("click", function () {
-        document.getElementById("img1").style.visibility = "visible"
-        document.getElementById("img2").style.visibility = "hidden"
-        document.getElementById("img3").style.visibility = "visible"
+    $("#btn2").click( function () {
+        $('#img1').css('visibility','visible')
+        $("#img2").css('visibility','hidden')
+        $("#img3").css('visibility','visible')
     })
 
-    document.getElementById("btn3").addEventListener("click", function () {
-        document.getElementById("img1").style.visibility = "visible"
-        document.getElementById("img3").style.visibility = "visible"
-        document.getElementById("img3").style.visibility = "hidden"
+    $("#btn3").click( function () {
+        $('#img1').css('visibility','visible')
+        $("#img2").css('visibility','visible')
+        $("#img3").css('visibility','hidden')
     })
 
 </script>
