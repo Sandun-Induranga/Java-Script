@@ -76,17 +76,22 @@
 
     /* Image hiding case */
 
-    // method 1
     document.getElementById("btn1").addEventListener("click", function () {
-        document.getElementById("img1").remove()
+        document.getElementById("img1").style.visibility = "hidden"
+        document.getElementById("img2").style.visibility = "visible"
+        document.getElementById("img3").style.visibility = "visible"
     })
 
     document.getElementById("btn2").addEventListener("click", function () {
-        document.getElementById("img2").remove()
+        document.getElementById("img1").style.visibility = "visible"
+        document.getElementById("img2").style.visibility = "hidden"
+        document.getElementById("img3").style.visibility = "visible"
     })
 
     document.getElementById("btn3").addEventListener("click", function () {
-        document.getElementById("img3").remove()
+        document.getElementById("img1").style.visibility = "visible"
+        document.getElementById("img3").style.visibility = "visible"
+        document.getElementById("img3").style.visibility = "hidden"
     })
 
 </script>
