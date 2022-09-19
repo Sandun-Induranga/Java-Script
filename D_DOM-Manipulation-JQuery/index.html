@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation With JQuery</title>
+    <style>
+        img {
+            border: 1px solid black;
+            width: 500px;
+            min-width: 500px;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello Java Script</h1>
+<h2>What is DOM..?</h2>
+<h3>Institute of Software Engineering</h3>
+
+<img id="image" src="" alt="image"><input type="text" placeholder="Input Something">
+
+<ul>
+    <li>GDSE</li>
+    <li>CMJD</li>
+    <li>RWAD</li>
+    <li>DEP</li>
+</ul>
+
+<button>Test</button>
+
+<h1 id="h1Id">////////////////////////////////</h1>
+
+<input id="inputId" type="text" placeholder="Input Something">
+<br>
+<br>
+
+<img id="img1" src="https://blog.ijse.lk/web/blog/wp-content/uploads/2019/09/IMG_2086.jpg" alt="">
+<img id="img2"
+     src="https://blog.ijse.lk/web/blog/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-24-at-12.29.48-PM-1-1-1024x574.jpeg"
+     alt="">
+<img id="img3" src="https://blog.ijse.lk/web/blog/wp-content/uploads/2019/09/IMG_1664.jpg" alt="">
+
+<br>
+<br>
+
+<button id="btn1">Image One</button>
+<button id="btn2">Image Two</button>
+<button id="btn3">Image Three</button>
+
+<script>
+
+    /*
+    *
+    *
+    // By using following methods we can select DOMs
+
+    document.getElementById("") // select unique element by Id (One HTML)
+    document.getElementsByClassName("") // select unique group of elements by class (HTML Collection)
+    document.getElementsByName("") // select an element by name attribute (Node Collection)
+    document.getElementsByTagName("") // select an element by own element name (HTML Collection)
+    document.querySelector("") // select only one element from the matching collection, Can use CSS selectors
+    *
+    /* Remove elements */
+    // document.getElementsByTagName("h1")[0].remove()
+
+
+    /* get the text field value and set is to the image source */
+    document.getElementsByTagName("button")[0].addEventListener("click", function () {
+        document.getElementById("image").src = document.getElementsByTagName("input")[0].value;
+    });
+
+    // Display typed text on the h1 while typing
+    document.getElementById("inputId").addEventListener("keyup", function () {
+        document.getElementById("h1Id").innerHTML = document.getElementById("inputId").value
+    });
+
+    /* Image hiding case */
+
+    document.getElementById("btn1").addEventListener("click", function () {
+        document.getElementById("img1").style.visibility = "hidden"
+        document.getElementById("img2").style.visibility = "visible"
+        document.getElementById("img3").style.visibility = "visible"
+    })
+
+    document.getElementById("btn2").addEventListener("click", function () {
+        document.getElementById("img1").style.visibility = "visible"
+        document.getElementById("img2").style.visibility = "hidden"
+        document.getElementById("img3").style.visibility = "visible"
+    })
+
+    document.getElementById("btn3").addEventListener("click", function () {
+        document.getElementById("img1").style.visibility = "visible"
+        document.getElementById("img3").style.visibility = "visible"
+        document.getElementById("img3").style.visibility = "hidden"
+    })
+
+</script>
+
+</body>
+</html>
