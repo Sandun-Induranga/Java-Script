@@ -57,7 +57,8 @@
                                     Place Orders</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-cloud-arrow-down-fill"></i>
+                                <a class="nav-link active" aria-current="page" href="#"><i
+                                        class="bi bi-cloud-arrow-down-fill"></i>
                                     Order Details</a>
                             </li>
 
@@ -100,7 +101,8 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -172,74 +174,16 @@
 <!-- JS For Bootstrap -->
 <script src="../assets/js/bootstrap.min.js"></script>
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
+
 <script>
     $('#btnSaveCustomer').click(function () {
-        // $('#txtCusId').val()
-        // $('#txtName').val()
-        // $('#txtAddress').val()
-        // $('#txtSalary').val()
-        //
+
+        let customerID = $('#txtCusId').val()
+        let customerName = $('#txtName').val()
+        let customerAddress = $('#txtAddress').val()
+        let customerSalary = $('#txtSalary').val()
+
         // alert($('#txtCusId').val())
-
-        /* Variables */
-        var x = 'Hello JS'; // Loosely typed - No type
-        typeof x;
-
-        /*
-        *
-        *   In Java
-        *   String s = ""; // Type is strong
-        *
-        *   In JS
-        *   var x = 10;
-        *   x = 'Ten';
-        *   x = true; // This is Dynamic Typing
-        *
-        * */
-
-        /* Troubles we have to face by creating variables
-        *
-        *   1
-        *   var myState = false;
-        *   var myState = true; // Legal ,Can duplicate
-        *
-        *   2
-        *   var myTp = 119
-        *   {
-        *       console.log(myTp) // Legal
-        *       var myAge = 100;
-        *   }
-        *   console.log(myAge); // This is also legal
-        *
-        *   console.log(newVar)  // No Error because the x defined bellow (Only with var keyword)
-        *   newVar = 10
-        *
-        *
-        *   // Hoisting - this is the special feature in var
-        *
-        *   console.log(x)
-        *   newVar = 10
-        *   console.log(x)  // No Error because the x defined bellow (Only with var keyword)
-        *
-        *
-        *
-        * ***************************************************** let ******************************************************
-        *
-        *   let myName = 'Dasun'
-        *   let myName = 'Nimal' // Error
-        *   console.log(myName)
-        *
-        *   {
-        *       let myAge = 10;
-        *   }
-        *
-        *   console.log(myAge) // Error  - Scope is considered
-        *
-        *   let also support for dynamic supporting
-        *
-        *   Not Supporting for Hoisting
-        *
-        * */
 
 
     })
