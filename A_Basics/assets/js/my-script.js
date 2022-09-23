@@ -68,4 +68,11 @@ typeof x;
 *
 *   Not Supporting for Hoisting
 *
+*
+*
+* ***************************************************** const ******************************************************
+*
+*   const name = 'Dasun'
+*   name = 'Nimal' // Error - can't change a value of a variable, if use const
+*
 * */
