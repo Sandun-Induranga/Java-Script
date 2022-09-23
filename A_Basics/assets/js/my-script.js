@@ -122,6 +122,14 @@ typeof x;
 *               These numbers referred by number type
 *
 *
+*
+*           --- BigInt ---
+*
+*               If we use a number greater than 9007199254740991, you should use BigInt Type;
+*
+*               let bigInt = 9007199254740995n; // should add 'n' after the number
+*
+*
 *  *********** Structural Types ************
 *
 *       Object
