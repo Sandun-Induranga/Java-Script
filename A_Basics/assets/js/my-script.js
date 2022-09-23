@@ -75,4 +75,24 @@ typeof x;
 *   const name = 'Dasun'
 *   name = 'Nimal' // Error - can't change a value of a variable, if use const
 *
-* */
+*
+* **************************************************  Data Types in JS  ********************************************
+*
+*  *********** Primitive Data Types **************
+*
+*       String
+*       Number
+*       Boolean
+*       Undefined
+*       BigInt
+*
+*  *********** Structural Types ************
+*
+*       Object
+*       Function
+*
+*  *********** Structural Root ***********
+*
+*       Null
+*
+*  */
