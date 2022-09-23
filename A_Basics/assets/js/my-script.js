@@ -13,7 +13,16 @@ typeof x;
 *   var x = 10;
 *   x = 'Ten';
 *   x = true; // This is Dynamic Typing
+*
+*   There are three ways to create variables
+*
+*   1. var
+*   2. let
+*   3. const
+*
+*
 *   Case Sensitive
+*   The first letter should be a-z, A-Z, $ or _
 *
 * */
 
