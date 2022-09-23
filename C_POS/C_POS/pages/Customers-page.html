@@ -211,6 +211,14 @@
         *   }
         *   console.log(myAge); // This is also legal
         *
+        *   console.log(newVar)  // No Error because the x defined bellow (Only with var keyword)
+        *   newVar = 10
+        *
+        *   // Hoisting - this is the special feature in var
+        *   console.log(x)
+        *   newVar = 10
+        *   console.log(x)  // No Error because the x defined bellow (Only with var keyword)
+        *
         * */
 
     })
