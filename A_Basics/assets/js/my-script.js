@@ -84,7 +84,24 @@ typeof x;
 *       Number
 *       Boolean
 *       Undefined
-*       BigInt
+*       BigInt (Newly Introduced)
+*
+*           --- String ---
+*               var name = "Hello";
+*               var address = 'Sri Lanka'; // Can use single quot or double
+*
+*               - String Related Methods -
+*                   length
+*                   toUpperCase
+*                   toLowerCase
+*                   trimLeft  - remove white spaces in left
+*                   trimRight
+*                   trim
+*                   split
+*                   charAt
+*                   charCodeAt
+*                   indexOf
+*                   subStr
 *
 *  *********** Structural Types ************
 *
