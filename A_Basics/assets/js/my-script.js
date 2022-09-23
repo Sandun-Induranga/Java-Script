@@ -99,9 +99,28 @@ typeof x;
 *                   trim
 *                   split - return an array with by separating the value that pass as the parameter
 *                   charAt
-*                   charCodeAt
+*                   charCodeAt - Ascii code
 *                   indexOf
-*                   subStr
+*                   substring
+*                   substr
+*
+*
+*
+*           --- Number ---
+*               decimal
+*               binary
+*               octal
+*               hexadecimal
+*               floating point
+*
+*               var number = 10;
+*               var number = ob1010;
+*               var number = O12;
+*               var number = 0xA;
+*               var number = 10.5;
+*
+*               These numbers referred by number type
+*
 *
 *  *********** Structural Types ************
 *
