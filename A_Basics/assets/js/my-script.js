@@ -167,11 +167,15 @@ typeof x;
 *       --- Literal Base Object (ROW Version of creating an Object) ---
 *
 *           var customer={
-*           id: "C001",
-*           name: "Dasun",
-*           address: "Galle",
-*           salary: 10000
+*               id: "C001",
+*               name: "Dasun",
+*               address: "Galle",
+*               salary: 10000
 *           }
+*
+*               - How to access values in an object -
+*                   1. Dot notation
+*                       customer.id
 *
 *
 *  */
