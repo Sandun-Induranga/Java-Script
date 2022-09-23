@@ -176,6 +176,7 @@
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 
 <script>
+
     $('#btnSaveCustomer').click(function () {
 
         let customerID = $('#txtCusId').val();
@@ -187,10 +188,10 @@
 
         // put all of these values inside a named container
         let customer = {
-            id:customerID,
-            name:customerName,
-            address:customerAddress,
-            salary:customerSalary
+            id: customerID,
+            name: customerName,
+            address: customerAddress,
+            salary: customerSalary
         };
 
         console.log(customer);

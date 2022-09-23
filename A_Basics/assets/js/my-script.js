@@ -148,7 +148,17 @@ typeof x;
 *  *********** Structural Types ************
 *
 *       Object
+*
+*           - There are two types of objects
+*               1. Literal Base Object
+*               2. todo
+*
 *       Function
+*
+*           - Just a method
+*               function () {
+*
+*               }
 *
 *  *********** Structural Root Primitives ***********
 *
