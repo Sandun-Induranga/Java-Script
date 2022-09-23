@@ -150,8 +150,11 @@ typeof x;
 *       Object
 *       Function
 *
-*  *********** Structural Root ***********
+*  *********** Structural Root Primitives ***********
 *
 *       Null
+*
+*       var x = null; // initialized, but no values (Use to initialize an variable with no value)
+*       Null is an object
 *
 *  */
