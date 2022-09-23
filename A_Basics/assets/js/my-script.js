@@ -97,7 +97,7 @@ typeof x;
 *                   trimLeft  - remove white spaces in left
 *                   trimRight
 *                   trim
-*                   split
+*                   split - return an array with by separating the value that pass as the parameter
 *                   charAt
 *                   charCodeAt
 *                   indexOf
