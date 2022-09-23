@@ -178,14 +178,22 @@
 <script>
     $('#btnSaveCustomer').click(function () {
 
-        let customerID = $('#txtCusId').val()
-        let customerName = $('#txtName').val()
-        let customerAddress = $('#txtAddress').val()
-        let customerSalary = $('#txtSalary').val()
+        let customerID = $('#txtCusId').val();
+        let customerName = $('#txtName').val();
+        let customerAddress = $('#txtAddress').val();
+        let customerSalary = $('#txtSalary').val();
 
-        alert(customerID+" "+customerName+" "+customerAddress+" "+customerSalary);
+        // alert(customerID+" "+customerName+" "+customerAddress+" "+customerSalary);
 
         // put all of these values inside a named container
+        let customer = {
+            id:customerID,
+            name:customerName,
+            address:customerAddress,
+            salary:customerSalary
+        };
+
+        console.log(customer);
 
 
     })
