@@ -137,6 +137,14 @@ typeof x;
 *               var bool = false;
 *
 *
+*
+*           --- Undefined ---
+*
+*               When there is no value for a variable, It is automatically refer the type of undefined.
+*
+*               var noValue;
+*
+*
 *  *********** Structural Types ************
 *
 *       Object
