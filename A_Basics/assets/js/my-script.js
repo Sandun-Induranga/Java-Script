@@ -157,4 +157,21 @@ typeof x;
 *       var x = null; // initialized, but no values (Use to initialize an variable with no value)
 *       Null is an object
 *
+*
+*
+*
+*
+*
+* **************************** How to create a named value container(Object) in JS*******************************
+*
+*       --- Literal Base Object (ROW Version of creating an Object) ---
+*
+*           var customer={
+*           id: "C001",
+*           name: "Dasun",
+*           address: "Galle",
+*           salary: 10000
+*           }
+*
+*
 *  */
