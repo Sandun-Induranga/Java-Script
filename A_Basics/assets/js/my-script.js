@@ -125,9 +125,16 @@ typeof x;
 *
 *           --- BigInt ---
 *
-*               If we use a number greater than 9007199254740991, you should use BigInt Type;
+*               If we use a number greater than 9007199254740991, it's better if use BigInt Type;
 *
 *               let bigInt = 9007199254740995n; // should add 'n' after the number
+*
+*
+*
+*           --- Boolean ---
+*
+*               var bool = true;
+*               var bool = false;
 *
 *
 *  *********** Structural Types ************
