@@ -162,7 +162,7 @@ typeof x;
 *
 *
 *
-* **************************** How to create a named value container(Object) in JS*******************************
+* **************************** How to create a named value container(Object) in JS *******************************
 *
 *       --- Literal Base Object (ROW Version of creating an Object) ---
 *
@@ -176,6 +176,9 @@ typeof x;
 *               - How to access values in an object -
 *                   1. Dot notation
 *                       customer.id
+*
+*                   2. Bracket notation
+*                       customer['name']
 *
 *
 *  */
