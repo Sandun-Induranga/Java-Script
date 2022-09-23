@@ -186,6 +186,7 @@
         typeof x;
 
         /*
+        *
         *   In Java
         *   String s = ""; // Type is strong
         *
@@ -193,6 +194,22 @@
         *   var x = 10;
         *   x = 'Ten';
         *   x = true; // This is Dynamic Typing
+        *
+        * */
+
+        /* Troubles we have to face by creating variables
+        *
+        *   1
+        *   var myState = false;
+        *   var myState = true; // Legal ,Can duplicate
+        *
+        *   2
+        *   var myTp = 119
+        *   {
+        *       console.log(myTp) // Legal
+        *       var myAge = 100;
+        *   }
+        *   console.log(myAge); // This is also legal
         *
         * */
 
