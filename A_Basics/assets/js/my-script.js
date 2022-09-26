@@ -205,15 +205,15 @@ typeof x;
 *           myName[0];
 *
 *       --- Array Related Methods
-*           push();
-*           pop();
-*           shift();
-*           unshift();
-*           slice();
-*           splice();
+*           push();       - add values the end of the array
+*           pop();        - Remove the element of last index
+*           shift();      - Remove the element of first index
+*           unshift();    - add values to first index
+*           slice();      - can copy values to another array (var array = slice(1,4);)
+*           splice();     - can remove any element of the array
 *           reverse();
 *           sort();
 *           length
-*           indexOf();
+*           indexOf();    - return the index of a value
 *
 *  */
