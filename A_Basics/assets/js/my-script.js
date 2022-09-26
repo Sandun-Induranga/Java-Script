@@ -1,8 +1,8 @@
 console.log("Hello there I'm from the console")
 
 /* Variables */
-var x = 'Hello JS'; // Loosely typed - No type
-typeof x;
+// var x = 'Hello JS'; // Loosely typed - No type
+// typeof x;
 
 /*
 *
@@ -156,6 +156,7 @@ typeof x;
 *       Function
 *
 *           - Just a method
+*               Here also valid hoisting
 *               function () {
 *
 *               }
