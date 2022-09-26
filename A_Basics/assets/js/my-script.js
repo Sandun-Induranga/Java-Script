@@ -199,9 +199,21 @@ typeof x;
 *               - var names = ['Dasun','Galle'];
 *
 *           2. Function Base Arrays
-*               - var ages = new Array(10,20,30,40);
+*               - var ages = new Array(10,20,30,40); // this array has been created by using Array Function
 *
 *       --- How to get values?
 *           myName[0];
+*
+*       --- Array Related Methods
+*           push();
+*           pop();
+*           shift();
+*           unshift();
+*           slice();
+*           splice();
+*           reverse();
+*           sort();
+*           length
+*           indexOf();
 *
 *  */
