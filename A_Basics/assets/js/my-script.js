@@ -221,7 +221,19 @@ typeof x;
 * ********************************************* Loops and Iteration ******************************************************
 *
 *       For Loop
+*
 *       While Loop
+*
 *       Do While Loop
+*
+*       for in
+*           for (let arrayKey in array) {
+*              console.log(array[arrayKey])
+*           }
+*
+*       for of
+*           for (let i of array) {
+*               console.log(i)
+*       }
 *
 *  */
