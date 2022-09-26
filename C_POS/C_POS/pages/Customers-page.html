@@ -96,6 +96,11 @@
                     <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         Add New Customer
                     </button>
+
+                    <!-- Add Customers Button -->
+                    <button type="button" class="btn btn-dark" id="getAll">
+                        Get All
+                    </button>
                 </div>
             </nav>
         </div>
@@ -153,16 +158,6 @@
                 </tr>
                 </thead>
                 <tbody id="tableBody">
-                <tr>
-                    <td>C001</td>
-                    <td>John John</td>
-                    <td>Galle</td>
-                    <td>10000</td>
-                    <td>
-                        <i class="bi bi-pencil-fill text-success"></i>
-                        <i class="bi bi-trash text-danger"></i>
-                    </td>
-                </tr>
                 </tbody>
             </table>
         </div>
@@ -200,10 +195,30 @@
 
         console.log(customers);
 
+        getAll();
+
+    });
 
 
+    $('#getAll').click(function () {
+        $("#tableBody").empty();
+        for (let customerElement of customers) {
+            $('#tableBody').append(
+                '<tr>'+'<td>'+customerElement.id+'</td>'+'<td>'+customerElement.name+'</td>'+'<td>'+customerElement.address+'</td>'+'<td>'+customerElement.salary+'</td>'+'</tr>'
+            );
+        }
+    });
 
-    })
+   function getAll () {
+        $("#tableBody").empty();
+        for (let customerElement of customers) {
+            $('#tableBody').append(
+                '<tr>'+'<td>'+customerElement.id+'</td>'+'<td>'+customerElement.name+'</td>'+'<td>'+customerElement.address+'</td>'+'<td>'+customerElement.salary+'</td>'+'</tr>'
+            );
+        }
+    };
+
+
 
 </script>
 
