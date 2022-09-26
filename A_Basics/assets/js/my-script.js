@@ -151,7 +151,7 @@ typeof x;
 *
 *           - There are two types of objects
 *               1. Literal Base Object
-*               2. todo
+*               2. Function Base
 *
 *       Function
 *
@@ -190,5 +190,12 @@ typeof x;
 *                   2. Bracket notation
 *                       customer['name']
 *
+*
+*
+* ********************************************* Arrays *****************************************************
+*
+*       --- There are two ways can create an array
+*           1. Literal Base Arrays
+*           2. Function Base Arrays
 *
 *  */
