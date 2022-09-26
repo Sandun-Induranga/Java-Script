@@ -161,6 +161,8 @@ console.log("Hello there I'm from the console")
 *
 *               }
 *
+*               Function hoisting - If we defined a function any place in our code we can call it any place
+*
 *  *********** Structural Root Primitives ***********
 *
 *       Null
