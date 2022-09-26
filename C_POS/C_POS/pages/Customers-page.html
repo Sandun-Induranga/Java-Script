@@ -201,12 +201,7 @@
 
 
     $('#getAll').click(function () {
-        $("#tableBody").empty();
-        for (let customerElement of customers) {
-            $('#tableBody').append(
-                '<tr>'+'<td>'+customerElement.id+'</td>'+'<td>'+customerElement.name+'</td>'+'<td>'+customerElement.address+'</td>'+'<td>'+customerElement.salary+'</td>'+'</tr>'
-            );
-        }
+        getAll();
     });
 
    function getAll () {
@@ -216,7 +211,11 @@
                 '<tr>'+'<td>'+customerElement.id+'</td>'+'<td>'+customerElement.name+'</td>'+'<td>'+customerElement.address+'</td>'+'<td>'+customerElement.salary+'</td>'+'</tr>'
             );
         }
-    }
+   }
+
+    $('#tableBody tr').click(function () {
+        alert('Done');
+    });
 
 
 
