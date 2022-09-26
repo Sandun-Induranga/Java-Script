@@ -196,6 +196,12 @@ typeof x;
 *
 *       --- There are two ways can create an array
 *           1. Literal Base Arrays
+*               - var names = ['Dasun','Galle'];
+*
 *           2. Function Base Arrays
+*               - var ages = new Array(10,20,30,40);
+*
+*       --- How to get values?
+*           myName[0];
 *
 *  */
