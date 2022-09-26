@@ -216,4 +216,12 @@ typeof x;
 *           length
 *           indexOf();    - return the index of a value
 *
+*
+*
+* ********************************************* Loops and Iteration ******************************************************
+*
+*       For Loop
+*       While Loop
+*       Do While Loop
+*
 *  */
