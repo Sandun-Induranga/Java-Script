@@ -48,6 +48,7 @@
 
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
+
 <script>
 
     /* Methods that we can use for traversing
@@ -55,7 +56,7 @@
     * children(); // return the children hierarchy
     * parent();  // return the nearest parent
     * parents(); // return the parent hierarchy
-    * find();
+    * find(); // can find a child of a parent
     * get();  // return an DOM object
     * eq();
     * children(":nth-child(1)");
@@ -66,5 +67,6 @@
     $('#d').parent().children(":eq(0)").children().children().children("ul").children(":nth-child(2)").css('color','red');
 
 </script>
+
 </body>
 </html>
