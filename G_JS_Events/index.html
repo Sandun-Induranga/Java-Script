@@ -9,7 +9,7 @@
 <h1 onmouseenter="testGlobalEvents()">JS Events</h1>
 <h2>There are two types of events</h2>
 <ul>
-    <li>Global Events</li>
+    <li id="se">Global Events</li>
     <li>Specified Events</li>
 </ul>
 <button>Test</button>
@@ -24,10 +24,18 @@
     *
     *  */
 
+
     // Global Events
     function testGlobalEvents() {
         console.log("Hello There..!");
     }
+
+
+    // Specified Events
+    let li = document.getElementById("se");
+    li.addEventListener('click',function () {
+        alert("clicked");
+    });
 
 </script>
 
