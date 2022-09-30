@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to use JS event with JQuery</title>
+</head>
+<body>
+<h1>Hello JS</h1>
+<h1>Let's see how jQuery support for our events in JS</h1>
+<input type="text" placeholder="Input Something">
+<button id="btn">Test</button>
+
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+
+
+<script>
+
+    // jQuery formalized way of binding events to elements
+    $("#btn").click(function () {
+        console.log("Button Clicked");
+    });
+
+    // This is how that jQuery gave to write down an event
+    $("#btn").on('click',function () {
+        console.log('Hello');
+    });
+
+</script>
+
+</body>
+</html>
