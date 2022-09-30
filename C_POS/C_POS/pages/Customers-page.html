@@ -221,7 +221,7 @@
     });
 
     function bindRowClickEvents() {
-        $("#tblCustomer> tbody> tr").click(function () {
+        $("#tblCustomer> tbody> tr>").click(function () {
             //how to get the row we click at the moment
             let id = $(this).children(":eq(0)").text();
             console.log(id);
@@ -240,6 +240,10 @@
             }
 
             getCustomer(customer);
+        });
+
+        $("#tblCustomer> tbody> tr>").dblclick(function () {
+            $(this).parent().remove();
         });
 
     }
