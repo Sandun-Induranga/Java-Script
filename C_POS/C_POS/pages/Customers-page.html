@@ -319,10 +319,17 @@
     $(window).on('mousemove',function (event) {
         let left = event.pageX;
         let top = event.pageY;
-        $("#mouse").css('position','absolute');
-        $("#mouse").css('z-index','10000');
-        $("#mouse").css('left',left+'px');
-        $("#mouse").css('top',top+'px');
+        // $("#mouse").css('position','absolute');
+        // // $("#mouse").css('z-index','10000');
+        // $("#mouse").css('left',left+'px');
+        // $("#mouse").css('top',top+'px');
+
+        $("#mouse").css({
+            'position': 'absolute',
+            'top' : top+'px',
+            'left' : left+'px'
+        });
+
     });
 
 
