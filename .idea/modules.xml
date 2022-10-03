@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/D_DOM-Manipulation-JQuery/D_DOM-Manipulation-JQuery.iml" filepath="$PROJECT_DIR$/D_DOM-Manipulation-JQuery/D_DOM-Manipulation-JQuery.iml" />
       <module fileurl="file://$PROJECT_DIR$/F_Traversing/F_Traversing.iml" filepath="$PROJECT_DIR$/F_Traversing/F_Traversing.iml" />
       <module fileurl="file://$PROJECT_DIR$/G_JS_Events/G_JS_Events.iml" filepath="$PROJECT_DIR$/G_JS_Events/G_JS_Events.iml" />
+      <module fileurl="file://$PROJECT_DIR$/H_DocumentVsWindow/H_DocumentVsWindow.iml" filepath="$PROJECT_DIR$/H_DocumentVsWindow/H_DocumentVsWindow.iml" />
     </modules>
   </component>
 </project>
