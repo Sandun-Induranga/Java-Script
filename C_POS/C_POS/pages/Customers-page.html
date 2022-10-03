@@ -93,7 +93,8 @@
                         <button class="btn btn-outline-success me-2" type="submit">Search</button>
                     </form>
                     <!-- Add Customers Button -->
-                    <button type="button" class="btn btn-dark me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button type="button" class="btn btn-dark me-2" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
                         Add New Customer
                     </button>
 
@@ -175,7 +176,10 @@
     let customers = [];
 
     $("#btnSave").click(function () {
+        saveCustomer();
+    });
 
+    function saveCustomer() {
         let cusId = $("#cusId").val();
         let cusName = $("#cusName").val();
         let cusAddress = $("#cusAddress").val();
@@ -192,8 +196,7 @@
 
         loadAllCustomers();
         bindRowClickEvents();
-
-    });
+    }
 
     function loadAllCustomers() {
 
@@ -212,7 +215,7 @@
             $("#tblCustomer > tbody").empty();
             for (let customer of customers) {
                 if (customer.id === $("#txtSearch").val()) {
-                    let row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td><td><i class="bi bi-pencil-fill text-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="edit"></i><i class="bi bi-trash text-danger"></i></td></tr>`;
+                    let row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td><td><i className="bi bi-pencil-fill text-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i><i className="bi bi-trash text-danger"></i></td></tr>`;
                     $("#tblCustomer > tbody").append(row);
                 }
             }
@@ -221,15 +224,15 @@
     });
 
     function bindRowClickEvents() {
-        $("#tblCustomer> tbody> tr>").click(function () {
+        $(".bi").click(function () {
             //how to get the row we click at the moment
-            let id = $(this).children(":eq(0)").text();
+            let id = $(this).parent().parent().children(":eq(0)").text();
             console.log(id);
-            let name = $(this).children(":eq(1)").text();
+            let name = $(this).parent().parent().children(":eq(1)").text();
             console.log(name);
-            let address = $(this).children(":eq(2)").text();
+            let address = $(this).parent().parent().children(":eq(2)").text();
             console.log(address);
-            let salary = $(this).children(":eq(3)").text();
+            let salary = $(this).parent().parent().children(":eq(3)").text();
             console.log(salary);
 
             let customer = {
@@ -248,6 +251,11 @@
 
     }
 
+    $("#btnGetAll").click(function () {
+        loadAllCustomers();
+        bindRowClickEvents();
+    })
+
     function getCustomer(customer) {
         $("#cusId").val(customer.id);
         $("#cusName").val(customer.name);
@@ -255,13 +263,46 @@
         $("#cusSalary").val(customer.salary);
     }
 
-    $(function() {
-        $("form").submit(function() { return false; });
+    $(function () {
+        $("form").submit(function () {
+            return false;
+        });
     });
 
     $("#body>tr").click(function () {
         alert("done");
     });
+
+
+    // text fields events
+    $('#cusId').keypress(function () {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            $("#cusName").focus();
+        }
+    });
+
+    $('#cusName').keypress(function () {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            $("#cusAddress").focus();
+        }
+    });
+
+    $('#cusAddress').keypress(function () {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            $("#cusSalary").focus();
+        }
+    });
+
+    $('#cusSalary').keypress(function () {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            saveCustomer();
+        }
+    });
+
 
 </script>
 
