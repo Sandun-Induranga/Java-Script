@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Document Ready vs Window on Load</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img{
+            width: 97vw;
+            height: 97vh;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Document Ready vs Window on Load</h1>
+<h1 id="1h">Document Ready vs Window on Load</h1>
+<iframe src="http://ijse.lk" frameborder="0" width="100%" height="400px"></iframe>
+
+<img src="assets/1_CsJ05WEGfunYMLGfsT2sXA.gif" id="2h">
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 
@@ -15,17 +32,23 @@
     // run after just creating DOM
     $(document).ready(function () {
         console.log("Document is ready");
+        $("#1h").css('display','none');
+        $("#2h").css('display','block');
+        $("iframe").css('display','none');
     });
 
     // alternative for above function
-    $(function () {
-        console.log("Alternative Document is ready");
-    });
+    // $(function () {
+    //     console.log("Alternative Document is ready");
+    // });
 
 
     // run after all the content fully loaded
     $(window).on('load', function () {
         console.log("Window on load");
+        $("iframe").css('display','block');
+        $("#1h").css('display','block');
+        $("#2h").css('display','none');
     })
 
 </script>
