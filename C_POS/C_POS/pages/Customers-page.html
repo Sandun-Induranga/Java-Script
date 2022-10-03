@@ -147,6 +147,8 @@
             </div>
         </div>
 
+        <h1 id="mouse">Mouse Event</h1>
+
         <!-- Table -->
         <div class="row d-flex overflow-auto mb-5 h-50 col-lg-8 col-12">
             <table class="table table-striped table-hover" id="tblCustomer">
@@ -276,7 +278,7 @@
 
 
     // text fields events
-    $('#cusId').keypress(function () {
+    $('#cusId').keydown(function (event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode == '13') {
             $("#cusName").focus();
@@ -307,6 +309,21 @@
     $("#cusId").keydown(function (event) {
         $("#pressed").text(event.key);
     })
+
+    $(document).keydown(function (event) {
+        if (event.key=='Tab'){
+            event.preventDefault();
+        }
+    });
+
+    $(window).on('mousemove',function (event) {
+        let left = event.pageX;
+        let top = event.pageY;
+        $("#mouse").css('position','absolute');
+        $("#mouse").css('z-index','10000');
+        $("#mouse").css('left',left+'px');
+        $("#mouse").css('top',top+'px');
+    });
 
 
 </script>
