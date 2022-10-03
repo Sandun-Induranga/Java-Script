@@ -239,4 +239,13 @@ console.log("Hello there I'm from the console")
 *               console.log(i)
 *       }
 *
+*
+*
+* ************************************************* Conditions *******************************************************
+*
+*   if
+*   else if
+*   switch
+*   ternary operator
+*
 *  */
