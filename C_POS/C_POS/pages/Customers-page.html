@@ -118,6 +118,7 @@
 
                     <!-- Form -->
                     <div class="d-flex justify-content-center">
+                        <h1 id="pressed">Key</h1>
                         <form class="w-75">
                             <div class="mb-3">
                                 <label for="cusId" class="form-label">Customer ID</label>
@@ -302,6 +303,10 @@
             saveCustomer();
         }
     });
+
+    $("#cusId").keydown(function (event) {
+        $("#pressed").text(event.key)
+    })
 
 
 </script>
