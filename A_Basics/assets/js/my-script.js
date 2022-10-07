@@ -270,4 +270,10 @@ console.log("Hello there I'm from the console")
 *           }
 *           myAge();
 *
+*   Function Arguments
+*       function calculate(i,s){
+*           return i + s;
+*       }
+*       calculate(10, 20);
+*
 *  */
