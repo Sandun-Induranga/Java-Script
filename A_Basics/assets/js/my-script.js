@@ -316,6 +316,7 @@ console.log("Hello there I'm from the console")
 *
 *
 *   Can pass a function as a argument
+*       --- This is also a reason which is js is known has a first class functions
 *
 *       function createMessage(content1, content2){
 *           return content1()+content2;
@@ -326,5 +327,16 @@ console.log("Hello there I'm from the console")
 *       }
 *
 *       console.log(createMessage(myName,"is a student"));  // return Dasun is a student
+*
+*
+*   Function in a Function
+*
+*       function getData(){
+*           return function get(){
+*               console.log("Hello");
+*           }
+*       }
+*
+*       getData()();  //output - Hello
 *
 *  */
