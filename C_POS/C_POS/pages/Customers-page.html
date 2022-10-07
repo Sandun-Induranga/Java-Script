@@ -146,7 +146,7 @@
             </div>
         </div>
 
-<!--        <h1 id="mouse">Mouse Event</h1>-->
+        <!--        <h1 id="mouse">Mouse Event</h1>-->
 
         <!-- Table -->
         <div class="row d-flex overflow-auto mb-5 h-50 col-lg-8 col-12">
@@ -182,19 +182,23 @@
     });
 
     function saveCustomer() {
-        let cusId = $("#cusId").val();
-        let cusName = $("#cusName").val();
-        let cusAddress = $("#cusAddress").val();
-        let cusSalary = $("#cusSalary").val();
+        if ( $("#btnSave").text()=="Edit"){
+            updateCustomer();
+        }else {
+            let cusId = $("#cusId").val();
+            let cusName = $("#cusName").val();
+            let cusAddress = $("#cusAddress").val();
+            let cusSalary = $("#cusSalary").val();
 
-        let customer = {
-            id: cusId,
-            name: cusName,
-            address: cusAddress,
-            salary: cusSalary
-        };
+            let customer = {
+                id: cusId,
+                name: cusName,
+                address: cusAddress,
+                salary: cusSalary
+            };
 
-        customers.push(customer);
+            customers.push(customer);
+        }
 
         loadAllCustomers();
         bindRowClickEvents();
@@ -212,17 +216,13 @@
     }
 
     $('#txtSearch').keyup(function () {
-        // var keycode = (event.keyCode ? event.keyCode : event.which);
-        // if (keycode == '13') {
-            $("#tblCustomer > tbody").empty();
-            for (let customer of customers) {
-                if (customer.id === $("#txtSearch").val()) {
-                    let row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td><td><i className="bi bi-pencil-fill text-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i><i className="bi bi-trash text-danger"></i></td></tr>`;
-                    $("#tblCustomer > tbody").append(row);
-                }
+        $("#tblCustomer > tbody").empty();
+        for (let customer of customers) {
+            if (customer.id === $("#txtSearch").val()) {
+                let row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td><td><i className="bi bi-pencil-fill text-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i><i className="bi bi-trash text-danger"></i></td></tr>`;
+                $("#tblCustomer > tbody").append(row);
             }
-        // }
-
+        }
     });
 
     function bindRowClickEvents() {
@@ -258,14 +258,27 @@
     $("#btnGetAll").click(function () {
         loadAllCustomers();
         bindRowClickEvents();
-    })
+    });
 
     function getCustomer(customer) {
+        $("#cusId").focus();
+        $("#cusId").css("box-shadow", "none");
         $("#cusId").val(customer.id);
         $("#cusName").val(customer.name);
         $("#cusAddress").val(customer.address);
         $("#cusSalary").val(customer.salary);
-        $("#btnSave").attr('value', 'Edit');
+    }
+
+    function updateCustomer() {
+        for (let customer of customers) {
+            if (customer.id === $("#cusId").val()) {
+                customer.name = $("#cusName").val();
+                customer.address = $("#cusAddress").val();
+                customer.salary = $("#cusSalary").val();
+                loadAllCustomers();
+                break;
+            }
+        }
     }
 
     $(function () {
