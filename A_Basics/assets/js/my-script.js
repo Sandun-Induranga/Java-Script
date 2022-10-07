@@ -339,4 +339,16 @@ console.log("Hello there I'm from the console")
 *
 *       getData()();  //output - Hello
 *
+*
+*
+*   **************************************  Objects Furthermore  ***************************************
+*
+*   var student = {
+*       id : "S001",
+*       name : "Dasun"
+*   }
+*
+*   student.id;
+*   student.id = "S002";
+*
 *  */

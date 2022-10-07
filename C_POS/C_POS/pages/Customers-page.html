@@ -211,9 +211,9 @@
         }
     }
 
-    $('#txtSearch').keypress(function () {
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if (keycode == '13') {
+    $('#txtSearch').keyup(function () {
+        // var keycode = (event.keyCode ? event.keyCode : event.which);
+        // if (keycode == '13') {
             $("#tblCustomer > tbody").empty();
             for (let customer of customers) {
                 if (customer.id === $("#txtSearch").val()) {
@@ -221,7 +221,7 @@
                     $("#tblCustomer > tbody").append(row);
                 }
             }
-        }
+        // }
 
     });
 
@@ -237,6 +237,8 @@
             let salary = $(this).parent().parent().children(":eq(3)").text();
             console.log(salary);
 
+            $("#btnSave").text("Edit");
+
             let customer = {
                 id: id,
                 name: name,
@@ -247,8 +249,8 @@
             getCustomer(customer);
         });
 
-        $("#tblCustomer> tbody> tr>").dblclick(function () {
-            $(this).parent().remove();
+        $(".bi-trash").click(function () {
+            $(this).parent().parent().remove();
         });
 
     }
@@ -263,6 +265,7 @@
         $("#cusName").val(customer.name);
         $("#cusAddress").val(customer.address);
         $("#cusSalary").val(customer.salary);
+        $("#btnSave").attr('value', 'Edit');
     }
 
     $(function () {
@@ -279,7 +282,6 @@
     let cusNamePattern = /^[A-z ]{3,15}$/;
     let cusAddressPattern = /^[A-z0-9 ,/]{4,20}$/;
     let cusSalaryPattern = /^[1-9][0-9]*(.[0-9]{2})?$/;
-    $("#btnSave").attr("disabled", true);
 
 
     // text fields events
