@@ -285,6 +285,9 @@ console.log("Hello there I'm from the console")
 *       }
 *       f(10, 20);  // No Error
 *
+*
+*
+*
 *   No support for method overloading
 *
 *       function method(country) {
@@ -298,6 +301,17 @@ console.log("Hello there I'm from the console")
 *       method("Sri Lanka");
 *
 *       Last method will call
+*
+*
+*
+*   How arguments work in JS functions without parameters
+*
+*       --- In js all arguments are stored in an array called arguments ---
+*
+*       function calc(){
+*           console.log(arguments); // output [10, 20]
+*       }
+*       calc(10, 20);
 *
 *  */
 
