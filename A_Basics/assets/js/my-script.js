@@ -310,8 +310,21 @@ console.log("Hello there I'm from the console")
 *
 *       function calc(){
 *           console.log(arguments); // output [10, 20]
+*           console.log(arguments[0]); // output 10
 *       }
 *       calc(10, 20);
 *
+*
+*   Can pass a function as a argument
+*
+*       function createMessage(content1, content2){
+*           return content1()+content2;
+*       }
+*
+*       function myName(){
+*           return "Dasun";
+*       }
+*
+*       console.log(createMessage(myName,"is a student"));  // return Dasun is a student
+*
 *  */
-
