@@ -263,12 +263,13 @@ console.log("Hello there I'm from the console")
 *           getName();
 *
 *
-*       2. Expression
+*       2. Function Expression
 *
 *           let myAge = function(){
 *               return 20;
 *           }
 *           myAge();
+*
 *
 *   Function Arguments
 *       function calculate(i,s){
@@ -276,4 +277,27 @@ console.log("Hello there I'm from the console")
 *       }
 *       calculate(10, 20);
 *
+*       let output = calculate(1, 1);
+*
+*
+*       function f(){
+*           return i + s;
+*       }
+*       f(10, 20);  // No Error
+*
+*   No support for method overloading
+*
+*       function method(country) {
+*           console.log("first method");
+*       }
+*
+*       function method(country, city) {
+*           console.log("second method");
+*       }
+*
+*       method("Sri Lanka");
+*
+*       Last method will call
+*
 *  */
+
