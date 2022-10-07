@@ -252,4 +252,22 @@ console.log("Hello there I'm from the console")
 *
 * **************************************************** Functions furthermore ******************************************
 *
+*   We can write a function in two ways
+*
+*
+*       1. Function Declaration
+*
+*           function getName(){
+*               console.log("Dasun");
+*           }
+*           getName();
+*
+*
+*       2. Expression
+*
+*           let myAge = function(){
+*               return 20;
+*           }
+*           myAge();
+*
 *  */
